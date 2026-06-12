@@ -1,5 +1,5 @@
 // Generic Developer interface
-interface Developer<T, X = null> {
+interface Developer<T, X = null> { // X = default used null for student
   name: string;
   salary: number;
   course: {
@@ -17,6 +17,12 @@ interface Job {
   experience: boolean;
 }
 
+//  type for clean code
+// type Job {
+//   designation: string;
+//   experience: boolean;
+// }
+
 // Student type
 interface Student {
   class: number;
@@ -27,8 +33,8 @@ interface Student {
 
 // Example 1: Developer with Job + extra student info
 const developer01: Developer<
-  Job,
-  { company: string; location: string }
+  Job,  // for jobStatus " we need to define the types here " *used interface as type for clean code.
+  { company: string; location: string } // optional student type
 > = {
   name: "nishat",
   salary: 20,
