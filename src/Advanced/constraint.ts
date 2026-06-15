@@ -30,5 +30,11 @@ name:"maher",
   isStudent:true
 };
 
+const student4 = {
+id:25635,
+name:"pushpa",
+  doingAJob: false,
+  isStudent:true
+};
 const result = addStudentToCourse(student3);
 console.log(result);
